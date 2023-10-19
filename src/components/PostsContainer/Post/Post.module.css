@@ -1,0 +1,56 @@
+.Post {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    width: calc(25% - 31px);
+    min-height: 150px;
+
+    padding: 15px;
+
+    border: 1px solid #ffffff;
+    border-radius: 20px;
+    background-color: #C5D0D9;
+    box-shadow: 3px 3px 5px #fff;
+
+    color: #593D3B;
+}
+
+.Post div:first-child {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.Post h3 {
+    width: 80%;
+
+    font-size: 18px;
+    text-align: center;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.Post button {
+    padding: 10px;
+
+    background-color: #70818C;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .7);
+    cursor: pointer;
+
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #ffffff;
+
+    transition: all 0.5s;
+}
+
+.Post button:hover {
+    background-color: #593D3B;
+    transition: all 0.5s;
+}
+
