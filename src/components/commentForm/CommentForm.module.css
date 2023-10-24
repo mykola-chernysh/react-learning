@@ -1,0 +1,29 @@
+.CommentForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.CommentForm h2 {
+    text-transform: uppercase;
+}
+
+.CommentForm input {
+    width: 200px;
+    padding: 10px;
+
+    font-size: 18px;
+
+    border-radius: 10px;
+}
+
+.CommentForm button {
+    width: 200px;
+    padding: 10px;
+
+    font-size: 18px;
+
+    border-radius: 10px;
+}
