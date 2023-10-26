@@ -5,7 +5,7 @@ import {postService} from "../../services/postService";
 import styles from './Posts.module.css';
 
 const Posts = ({postId}) => {
-    const [post, setPost] = useState([]);
+    const [post, setPost] = useState(null);
 
     useEffect(() => {
         postService.getPostById(postId).then(({data}) => setPost(data))
@@ -14,7 +14,7 @@ const Posts = ({postId}) => {
     return (
         <div className={styles.Posts}>
             {
-                <Post key={post.id} post={post}/>
+                post && <Post key={post.id} post={post}/>
             }
         </div>
     );
