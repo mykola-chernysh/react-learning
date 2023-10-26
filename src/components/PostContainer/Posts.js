@@ -4,10 +4,11 @@ import {Post} from "./Post";
 import styles from './Posts.module.css';
 
 const Posts = ({post}) => {
+
     return (
         <div className={styles.Posts}>
             {
-                <Post key={post.id} post={post}/>
+                <Post post={post}/>
             }
         </div>
     );

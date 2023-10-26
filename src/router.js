@@ -10,33 +10,29 @@ import {ErrorPage} from "./pages/ErrorPage";
 import {postService} from "./services/postService";
 
 const router = createBrowserRouter([
-    {
-        path:'',
-        element: <MainLayout/>,
-        errorElement: <ErrorPage/>,
-        children: [
-            {index: true, element:<Navigate to={'main'}/>},
-            {path:'/main', element: <HomePage/>},
-            {path:'/todos', element: <TodosPage/>},
-            {path:'/albums', element: <AlbumsPage/>},
-            {path:'/comments', element: <CommentsPage/>},
-            {
-                path:'/posts',
-                element: <PostPage/>,
-                loader: async (id) => {
-                    const post = await postService.getPostById(id).then(({data}) => data)
-                    console.log(post);
-                    return post;
+        {
+            path: '',
+            element: <MainLayout/>,
+            errorElement: <ErrorPage/>,
+            children: [
+                {index: true, element: <Navigate to={'main'}/>},
+                {path: '/main', element: <HomePage/>},
+                {path: '/todos', element: <TodosPage/>},
+                {path: '/albums', element: <AlbumsPage/>},
+                // {path:'/comments', element: <CommentsPage/>},
+                {
+                    path: '/comments',
+                    element: <CommentsPage/>,
+                    loader: () => postService.getAll().then(({data}) => data)
                 },
-                children: [
-                    {
-                        path: ':id',
-                        element: <PostPage/>
-                    }
-                ]
-            }
-        ]
-    },
-]);
+                {
+                    path: '/posts/:id',
+                    element: <PostPage/>,
+                    loader: ({params: {id}}) => postService.getPostById(id).then(({data}) => data)
+                }
+            ]
+        },
+    ])
+;
 
 export {router};
