@@ -1,14 +1,14 @@
 import React from 'react';
-import {useLocation} from "react-router-dom";
+import {useLoaderData} from "react-router-dom";
 
 import {Posts} from "../components/PostContainer/Posts";
 
 const PostPage = () => {
-    const {state: postId} = useLocation();
+    const post = useLoaderData();
 
     return (
         <div>
-            <Posts postId={postId}/>
+            <Posts post={post}/>
         </div>
     );
 };

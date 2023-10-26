@@ -7,6 +7,7 @@ import {AlbumsPage} from "./pages/AlbumsPage";
 import {CommentsPage} from "./pages/CommentsPage";
 import {PostPage} from "./pages/PostPage";
 import {ErrorPage} from "./pages/ErrorPage";
+import {postService} from "./services/postService";
 
 const router = createBrowserRouter([
     {
@@ -19,7 +20,21 @@ const router = createBrowserRouter([
             {path:'/todos', element: <TodosPage/>},
             {path:'/albums', element: <AlbumsPage/>},
             {path:'/comments', element: <CommentsPage/>},
-            {path:'/posts', element: <PostPage/>}
+            {
+                path:'/posts',
+                element: <PostPage/>,
+                loader: async (id) => {
+                    const post = await postService.getPostById(id).then(({data}) => data)
+                    console.log(post);
+                    return post;
+                },
+                children: [
+                    {
+                        path: ':id',
+                        element: <PostPage/>
+                    }
+                ]
+            }
         ]
     },
 ]);
