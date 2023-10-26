@@ -1,0 +1,17 @@
+.HomePage {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 100px;
+}
+
+.HomePage span {
+    font-size: 80px;
+}
+
+.HomePage h1 {
+    text-transform: uppercase;
+    font-size: 80px;
+}

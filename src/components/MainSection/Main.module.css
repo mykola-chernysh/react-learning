@@ -1,0 +1,60 @@
+.Main {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    min-height: 100px;
+
+    background-color: grey;
+}
+
+.Main a {
+    font-size: 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: white;
+
+    text-decoration: none;
+    text-shadow: 1px 1px 1px black;
+
+    transition: all .3s;
+}
+
+.Main a:hover {
+    color: black;
+    transition: all .3s;
+}
+
+.Main a[class='active'] {
+    color: black;
+    text-decoration: underline;
+}
+
+.Main_buttons {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+.Main_buttons button {
+    display: flex;
+    width: 50px;
+    height: 50px;
+    font-size: 80px;
+
+    background-color: white;
+
+    cursor: pointer;
+}
+
+.Main_buttons button:first-child {
+    background-image: url(../../images/arrow-left.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.Main_buttons button:last-child {
+    background-image: url(../../images/arrow-right.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}

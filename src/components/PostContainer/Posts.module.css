@@ -1,0 +1,26 @@
+.Posts {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+
+    margin-top: 50px;
+
+    text-align: center;
+}
+
+.Posts > div {
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    border: 1px solid black;
+    border-radius: 20px;
+
+    padding: 20px 10px;
+
+    background-color: lightgrey;
+    text-decoration: none;
+    color: black;
+}

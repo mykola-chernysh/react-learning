@@ -1,0 +1,17 @@
+.ErrorPage {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+
+    height: 100vh;
+
+    font-size: 100px;
+    font-weight: 700;
+    color: red;
+}
+
+.ErrorPage span:first-child {
+    text-transform: uppercase;
+}

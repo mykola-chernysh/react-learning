@@ -1,0 +1,29 @@
+.Todos {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+
+    padding: 10px;
+    text-align: center;
+}
+
+.Todos > div {
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+
+    border: 1px solid black;
+    border-radius: 20px;
+
+    padding: 20px 10px;
+
+    background-color: lightgrey;
+}
+
+.Todos span {
+    text-transform: uppercase;
+}

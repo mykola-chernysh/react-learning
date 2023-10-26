@@ -1,0 +1,27 @@
+.Comments {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+
+    padding: 10px;
+    text-align: center;
+}
+
+.Comments > a {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+
+    border: 1px solid black;
+    border-radius: 20px;
+
+    padding: 20px 10px;
+
+    background-color: lightgrey;
+    text-decoration: none;
+    color: black;
+}
