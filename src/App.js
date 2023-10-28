@@ -1,14 +1,14 @@
 import React from 'react';
 
-import {UserForm} from "./components/userForm/UserForm";
-import {CommentForm} from "./components/commentForm/CommentForm";
+import {UsersContainer} from "./components/UsersContainer/UsersContainer";
+import {CommentsContainer} from "./components/CommentsContainer/CommentsContainer";
 import './App.css';
 
 const App = () => {
     return (
         <div className='app'>
-            <UserForm/>
-            <CommentForm/>
+            <UsersContainer/>
+            <CommentsContainer/>
         </div>
     );
 };

@@ -1,0 +1,51 @@
+.CommentFormWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.CommentForm {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.CommentForm h2 {
+    text-transform: uppercase;
+}
+
+.CommentForm input {
+    width: 200px;
+    padding: 10px;
+
+    font-size: 18px;
+
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+.CommentForm button {
+    width: 200px;
+    padding: 10px;
+
+    font-size: 18px;
+    font-weight: 700;
+
+    border: 1px solid black;
+    border-radius: 10px;
+
+    background-color: grey;
+}
+
+.CommentForm button:disabled {
+    background-color: lightgrey;
+    color: dimgrey;
+}
+
+.CommentForm_errors {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    font-size: 18px;
+    color: red;
+}

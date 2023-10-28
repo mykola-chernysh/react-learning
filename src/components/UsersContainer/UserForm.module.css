@@ -1,0 +1,53 @@
+.UserFormWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.UserForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.UserForm h2 {
+    text-transform: uppercase;
+}
+
+.UserForm input {
+    width: 200px;
+    padding: 10px;
+
+    font-size: 18px;
+
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+.UserForm button {
+    width: 200px;
+    padding: 10px;
+
+    font-size: 18px;
+    font-weight: 700;
+
+    border: 1px solid black;
+    border-radius: 10px;
+
+    background-color: grey;
+}
+
+.UserForm button:disabled {
+    background-color: lightgrey;
+    color: dimgrey;
+}
+
+.UserForm_errors {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    font-size: 18px;
+    color: red;
+}

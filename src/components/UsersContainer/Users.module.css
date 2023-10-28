@@ -1,0 +1,18 @@
+.Users {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
+
+.Users > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+
+    padding: 10px;
+
+    border: 1px solid black;
+    border-radius: 10px;
+}

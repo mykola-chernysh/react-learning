@@ -6,19 +6,21 @@ import {userService} from "../../services/userService";
 import {userValidator} from "../../validators/userValidator";
 import styles from './UserForm.module.css';
 
-const UserForm = () => {
+const UserForm = ({setUsers}) => {
     const {register, handleSubmit, reset, formState: {isValid, errors}} = useForm({
         mode: 'all',
         resolver: joiResolver(userValidator)
     });
 
     const addUser = async (user) => {
-        await userService.createUser(user);
+        const {data} = await userService.createUser(user);
+        setUsers(prev => [...prev, data]);
         reset();
     }
 
+
     return (
-        <div>
+        <div className={styles.UserFormWrapper}>
             <form onSubmit={handleSubmit(addUser)} className={styles.UserForm}>
                 <h2>Create user</h2>
                 <input type="text" placeholder={'Name'} {...register('name')}/>
@@ -38,9 +40,11 @@ const UserForm = () => {
                 <button disabled={!isValid}>Create user</button>
             </form>
 
-            {errors.name && <div>{errors.name.message}</div>}
-            {errors.username && <div>{errors.username.message}</div>}
-            {errors.email && <div>{errors.email.message}</div>}
+            <div className={styles.UserForm_errors}>
+                {errors.name && <div>{errors.name.message}</div>}
+                {errors.username && <div>{errors.username.message}</div>}
+                {errors.email && <div>{errors.email.message}</div>}
+            </div>
         </div>
     );
 };
