@@ -1,0 +1,45 @@
+.UserDetails {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+
+    margin: 0 0 30px 0;
+
+}
+
+.UserDetails h1 {
+    font-size: 60px;
+    text-transform: uppercase;
+}
+
+.UserDetails button {
+    padding: 10px;
+
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+
+    border: 1px solid black;
+    border-radius: 10px;
+
+    cursor: pointer;
+}
+
+.UserDetails_block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+
+    padding: 10px;
+
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+.UserDetails p {
+    font-size: 20px;
+
+}

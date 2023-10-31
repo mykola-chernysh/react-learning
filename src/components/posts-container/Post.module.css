@@ -1,0 +1,23 @@
+.Post {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+
+    padding: 10px;
+
+    border: 1px solid black;
+}
+
+.Post p {
+    font-size: 16px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.Post a {
+    font-size: 18px;
+    text-transform: uppercase;
+    text-decoration: none;
+}

@@ -1,0 +1,19 @@
+.Users {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.Users h1 {
+    font-size: 80px;
+    text-transform: uppercase;
+}
+
+.Users_block {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+
+}

@@ -1,0 +1,19 @@
+.Posts {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.Posts h1 {
+    font-size: 40px;
+    text-transform: uppercase;
+}
+
+.Posts_block {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+
+}

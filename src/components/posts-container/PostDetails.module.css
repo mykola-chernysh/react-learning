@@ -1,0 +1,31 @@
+.PostDetails {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.PostDetails h1 {
+    font-size: 60px;
+    text-transform: uppercase;
+}
+
+
+.PostDetails_block {
+    width: 700px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+
+    padding: 15px;
+
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+.PostDetails p {
+    font-size: 20px;
+    text-align: justify;
+}
