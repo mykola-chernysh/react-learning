@@ -1,0 +1,12 @@
+.Character {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    padding: 15px;
+
+    font-size: 20px;
+
+    border: 1px solid black;
+}

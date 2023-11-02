@@ -1,0 +1,8 @@
+.CharactersPage {
+    display: flex;
+    justify-content: center;
+}
+
+.CharactersPage > div {
+    width: 1400px;
+}

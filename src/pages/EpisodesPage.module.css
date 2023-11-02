@@ -1,0 +1,8 @@
+.EpisodesPage {
+    display: flex;
+    justify-content: center;
+}
+
+.EpisodesPage > div {
+    width: 1200px;
+}
