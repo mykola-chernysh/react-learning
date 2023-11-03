@@ -1,42 +1,31 @@
 import React, {useEffect, useState} from 'react';
-import {useLocation, useNavigate} from "react-router-dom";
+import {useNavigate} from "react-router-dom";
 
 import css from './Characters.module.css';
 import {Character} from "./Character";
 import {useAppContext} from "../../hooks";
-import {episodesService} from "../../services";
+import {charactersService} from "../../services/charactersService";
 
 const Characters = () => {
-    const [characters, setCharacters] = useState([]);
     const navigate = useNavigate();
-    const {state: id} = useLocation();
-    const {setEpisode} = useAppContext();
-
+    const [characters, setCharacters] = useState([]);
+    const {chars} = useAppContext();
 
     useEffect(() => {
-        const getCharacter = async () => {
-            const data = await episodesService.getById(id).then(({data}) => data);
-            setEpisode(data);
+        charactersService.getEpisodeCharacters(chars).then(value => setCharacters(value));
+    }, [chars]);
 
-            const character = await Promise.all(data.characters.map(character => {
-                return fetch(character).then(value => value.json());
-            }));
-
-            setCharacters(character);
-        }
-
-        getCharacter().then();
-    }, []);
+    console.log(characters);
 
     return (
         <div className={css.Characters}>
             <button onClick={() => {
                 navigate(-1);
-                setEpisode(null);
-            }}>Back</button>
+            }}>Back
+            </button>
             <div className={css.Characters_block}>
                 {
-                    characters.map((character, index) => <Character key={index} character={character}/>)
+                   characters.map((character, index) => <Character key={index} character={character}/>)
                 }
             </div>
         </div>

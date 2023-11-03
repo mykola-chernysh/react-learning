@@ -6,8 +6,10 @@ const useAppContext = () => {
     const [state, setState] = useContext(Context);
 
     return {
-        episode: state.episode,
-        setEpisode: (value) => setState(prev => ({...prev, episode: value}))
+        ep: state.ep,
+        setEp: (value) => setState(prev => ({...prev, ep: value})),
+        chars: state.chars,
+        setChars: (value) => setState(prev => ({...prev, chars: value}))
     }
 }
 
