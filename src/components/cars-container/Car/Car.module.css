@@ -1,0 +1,16 @@
+.Car {
+    width: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
+
+    padding: 10px;
+
+    border: 1px solid #D2D8D9;
+}
+
+.Car > button {
+    text-transform: uppercase;
+    padding: 10px;
+}
