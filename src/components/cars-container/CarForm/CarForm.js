@@ -27,10 +27,11 @@ const CarForm = () => {
     const addCar = async (newCar) => {
         if (car) {
             await carsService.updateById(car.id, newCar);
-            dispatch(carsActions.changeTrigger(!trigger))
+            dispatch(carsActions.changeTrigger(!trigger));
+            dispatch(carsActions.updateCar(null));
         } else {
             await carsService.create(newCar);
-            dispatch(carsActions.changeTrigger(!trigger))
+            dispatch(carsActions.changeTrigger(!trigger));
         }
 
         reset();
