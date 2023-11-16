@@ -1,0 +1,16 @@
+.Character {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+
+    font-size: 16px;
+
+    border: 1px solid black;
+}
+
+.Character > img {
+    width: 250px;
+}
