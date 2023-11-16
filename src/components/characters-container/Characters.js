@@ -4,16 +4,16 @@ import {useDispatch, useSelector} from "react-redux";
 
 import css from './Characters.module.css';
 import {Character} from "./Character";
-import {episodesActions} from "../../redux";
+import {charactersActions} from "../../redux";
 
 const Characters = () => {
+    const {characters} = useSelector(state => state.characters);
     const dispatch = useDispatch();
-    const {characters} = useSelector(state => state.episodes);
     const navigate = useNavigate();
     const {ids} = useParams();
 
     useEffect(() => {
-        dispatch(episodesActions.getEpisodeCharacters({ids}));
+        dispatch(charactersActions.getCharacters({ids}));
     }, [dispatch, ids]);
 
     return (
