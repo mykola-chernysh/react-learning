@@ -1,0 +1,19 @@
+.Comments_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.Comments_container > h1 {
+    font-size: 50px;
+    text-transform: uppercase;
+}
+
+.Comments {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
