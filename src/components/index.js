@@ -1,2 +1,1 @@
-export * from './posts-container';
-export * from './comments-container';
+export * from './cars-container';
